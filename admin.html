@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Admin Panel</title></head>
+<body>
+  <h2>🛠️ Admin Panel</h2>
+  <p>Welcome Admin (Key: 8825062664)</p>
+  <p>List of registered shopkeepers:</p>
+  <ul id="shopList"></ul>
+  <script>
+    const shops = JSON.parse(localStorage.getItem("shops") || "[]");
+    const list = document.getElementById("shopList");
+    shops.forEach(shop => {
+      const li = document.createElement("li");
+      li.textContent = `${shop.shopName} - ${shop.ownerName} - ${shop.contact}`;
+      list.appendChild(li);
+    });
+  </script>
+</body>
+</html>
