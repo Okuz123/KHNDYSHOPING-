@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anantnag Shopkeeper Market</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>🛍️ Anantnag Market - Shopkeeper Portal</h2>
+    <div id="forms">
+      <div id="register">
+        <h3>Register Your Shop</h3>
+        <input type="text" id="shopName" placeholder="Shop Name" required />
+        <input type="text" id="ownerName" placeholder="Owner Name" required />
+        <input type="text" id="contact" placeholder="Contact Number" required />
+        <input type="email" id="email" placeholder="Email Address" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <button onclick="registerShop()">Register</button>
+      </div>
+      <div id="login">
+        <h3>Login to Your Shop</h3>
+        <input type="email" id="loginEmail" placeholder="Email" />
+        <input type="password" id="loginPassword" placeholder="Password" />
+        <button onclick="loginShop()">Login</button>
+      </div>
+    </div>
+    <p>Need Help? <a href="https://wa.me/918825062664" target="_blank">📞 WhatsApp Support</a></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
