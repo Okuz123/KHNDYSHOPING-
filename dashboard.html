@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head><title>My Shop Dashboard</title></head>
+<body>
+  <h2>📦 Manage Your Products</h2>
+  <div>
+    <input type="text" id="productName" placeholder="Product Name" />
+    <input type="number" id="productPrice" placeholder="Price ₹" />
+    <button onclick="addProduct()">Add Product</button>
+  </div>
+  <h3>🛍️ Your Products:</h3>
+  <ul id="productList"></ul>
+
+  <script>
+    const user = JSON.parse(localStorage.getItem("loggedInUser"));
+    const key = `products_${user.email}`;
+    const productList = JSON.parse(localStorage.getItem(key) || "[]");
+
+    const listElement = document.getElementById("productList");
+    function display() {
+      listElement.innerHTML = "";
+      productList.forEach(p => {
+        const li = document.createElement("li");
+        li.textContent = `${p.name} - ₹${p.price}`;
+        listElement.appendChild(li);
+      });
+    }
+    function addProduct() {
+      const name = document.getElementById("productName").value;
+      const price = document.getElementById("productPrice").value;
+      productList.push({ name, price });
+      localStorage.setItem(key, JSON.stringify(productList));
+      display();
+    }
+    display();
+  </script>
+</body>
+</html>
