@@ -1,0 +1,38 @@
+body {
+  font-family: sans-serif;
+  background: #f2f2f2;
+  padding: 20px;
+  color: #333;
+}
+.container {
+  max-width: 400px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #aaa;
+}
+input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+}
+button {
+  width: 100%;
+  background: green;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+button:hover {
+  background: darkgreen;
+}
+h2, h3 {
+  text-align: center;
+}
+a {
+  color: blue;
+  text-decoration: none;
+}
